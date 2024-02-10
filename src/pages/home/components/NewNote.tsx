@@ -91,7 +91,6 @@ export function NewNote({ handleCreateNote }: NewNoteProps) {
     toast.success('Salvo com sucesso')
   }
 
-  console.log(content.trim().length)
   return (
     <Dialog.Root>
       <Dialog.Trigger
@@ -108,7 +107,7 @@ export function NewNote({ handleCreateNote }: NewNoteProps) {
 
       <Dialog.Portal>
         <Dialog.Overlay className="inset-0 fixed bg-black/60" />
-        <Dialog.Content className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-slate-700 flex flex-1 flex-col max-w-[640px] w-full rounded-md overflow-hidden min-h-[60vh] outline-none">
+        <Dialog.Content className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-slate-700 flex flex-1 flex-col max-w-[320px] md:max-w-[640px] w-full rounded-md overflow-hidden min-h-[60vh] outline-none">
           <Dialog.Close className="absolute top-0 right-0 m-3 p-1 rounded-md leading-3 outline-none bg-transparent hover:text-red-400 text-sm font-medium text-slate-300 focus-visible:ring-1 focus-visible:ring-slate-400">
             <SignOut size={24} />
           </Dialog.Close>
@@ -127,7 +126,7 @@ export function NewNote({ handleCreateNote }: NewNoteProps) {
                   onChange={handleChangeText}
                 />
               ) : (
-                <p className="text-sm leading-6 text-slate-400 flex gap-1">
+                <p className="text-sm leading-6 text-slate-400 flex gap-1 flex-wrap">
                   Comece gravando uma nota em
                   <button
                     onClick={handleStartAudio}

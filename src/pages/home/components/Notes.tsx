@@ -29,7 +29,7 @@ export function Notes({ note, handleDeleteNote }: NotesProps) {
 
       <Dialog.Portal>
         <Dialog.Overlay className="inset-0 fixed bg-black/60" />
-        <Dialog.Content className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-slate-700 flex flex-1 flex-col max-w-[640px] w-full rounded-md overflow-hidden min-h-[60vh]">
+        <Dialog.Content className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-slate-700 flex flex-1 flex-col max-w-[320px] md:max-w-[640px] w-full rounded-md overflow-hidden min-h-[60vh]">
           <Dialog.Close className="absolute top-0 right-0 m-3 p-1 rounded-md leading-3 outline-none bg-transparent hover:text-red-400 text-sm font-medium text-slate-300 focus-visible:ring-1 focus-visible:ring-slate-400">
             <SignOut size={24} />
           </Dialog.Close>
@@ -49,7 +49,7 @@ export function Notes({ note, handleDeleteNote }: NotesProps) {
           >
             Deseja
             <span className="text-red-500 group-hover:underline">excluir</span>
-            nota?
+            essa nota?
           </button>
         </Dialog.Content>
       </Dialog.Portal>

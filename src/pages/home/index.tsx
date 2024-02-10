@@ -54,7 +54,7 @@ export function Home() {
     : note
 
   return (
-    <div className="mx-auto max-w-6xl my-12 space-y-6 p-6 lg:p-0">
+    <div className="mx-auto max-w-6xl my-12 space-y-6 p-6">
       <img src={Logo} alt="Logo NLW Experience" />
 
       <form className="w-full">
