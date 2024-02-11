@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Logo from '../../assets/Logo.svg'
 import { NewNote } from './components/NewNote'
 import { Notes } from './components/Notes'
+import { toast } from 'sonner'
 
 interface NoteProps {
   id: string
@@ -39,6 +40,7 @@ export function Home() {
 
     setNote(notesArray)
     localStorage.setItem('notes', JSON.stringify(notesArray))
+    toast.info('Nota deletada com sucesso')
   }
 
   function handleFilteredNotes(event: React.ChangeEvent<HTMLInputElement>) {
