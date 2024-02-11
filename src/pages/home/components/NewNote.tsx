@@ -121,7 +121,7 @@ export function NewNote({ handleCreateNote }: NewNoteProps) {
               {useNotesText ? (
                 <textarea
                   autoFocus
-                  className="flex-1 bg-transparent border-0 outline-none text-slate-400 resize-none"
+                  className="flex-1 bg-transparent border-0 outline-none text-slate-400 resize-none hyphens-auto"
                   value={content}
                   onChange={handleChangeText}
                 />
